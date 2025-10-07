@@ -3,6 +3,9 @@
 Um aplicativo simples e leve para baixar vídeos do YouTube diretamente no seu computador.  
 Desenvolvido em **Python + PyWebView**, com interface moderna e intuitiva.  
 
+![Screenshot do YouTube Downloader](screenshot.png)
+
+
 ---
 
 ## 💾 Como instalar e usar
