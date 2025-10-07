@@ -8,7 +8,7 @@ Desenvolvido em **Python + PyWebView**, com interface moderna e intuitiva.
 ## 💾 Como instalar e usar
 
 1️⃣ **Baixe o arquivo ZIP:**  
-👉 [[Download YouTube Video Downloader](https://github.com/seu-usuario/youtube-downloader/releases/latest/download/youtube_downloader.zip)](https://github.com/user-attachments/files/22752416/video-downloader.zip)
+👉 [[Download YouTube Video Downloader](https://github.com/seu-usuario/youtube-downloader/releases/latest/download/youtube_downloader.zip)]
 
 2️⃣ **Descompacte** o arquivo ZIP em qualquer pasta do seu computador (por exemplo, na área de trabalho).
 
