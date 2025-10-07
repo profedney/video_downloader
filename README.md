@@ -8,7 +8,7 @@ Desenvolvido em **Python + PyWebView**, com interface moderna e intuitiva.
 ## 💾 Como instalar e usar
 
 1️⃣ **Baixe o arquivo ZIP:**  
-👉 https://github.com/user-attachments/files/22752416/video-downloader.zip
+👉
 
 2️⃣ **Descompacte** o arquivo ZIP em qualquer pasta do seu computador (por exemplo, na área de trabalho).
 
