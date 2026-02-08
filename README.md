@@ -108,7 +108,7 @@ A arquitetura facilita a adição de novos recursos, como seleção de formato, 
 
 Licença
 
-Defina aqui a licença do projeto (exemplo: MIT, GPL-3.0 ou Apache-2.0).
+MIT, GPL-3.0
 
 ## 👨‍💻 Autor
 
