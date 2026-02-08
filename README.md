@@ -8,13 +8,13 @@ Desenvolvido em **Python + Web UI**, com interface moderna e intuitiva.
 
 ---
 
-Video Downloader (Python + Web UI)
+## Video Downloader (Python + Web UI)
 
 Downloader de vídeos do YouTube (e de outros sites suportados pelo yt-dlp) desenvolvido em Python, utilizando uma interface web acessada diretamente pelo navegador. O projeto executa um servidor HTTP local que expõe uma API simples para download e uma interface HTML/JavaScript para interação com o usuário.
 
 A opção por interface web elimina dependências gráficas nativas (GTK/Qt), garantindo compatibilidade com Python 3.13 e funcionamento consistente em Linux, Windows e macOS.
 
-Características
+## Características
 
 Python 3.13 ou superior
 
@@ -30,7 +30,7 @@ Download no melhor formato disponível (preferência MP4)
 
 Arquitetura clara e extensível
 
-Arquitetura
+## Arquitetura
 
 O sistema é dividido em duas camadas bem definidas:
 
@@ -40,7 +40,7 @@ Responsável por executar um servidor HTTP local, receber requisições de downl
 Frontend Web
 Responsável por coletar a URL do vídeo, enviar requisições HTTP para o backend e exibir mensagens de status ao usuário.
 
-Fluxo simplificado:
+## Fluxo simplificado:
 
 Navegador → Interface Web → HTTP (localhost) → Python → yt-dlp → Downloads
 
@@ -65,7 +65,7 @@ script.js
 .gitignore
 LICENSE
 
-Instalação
+## Instalação
 
 Clone o repositório:
 
@@ -82,7 +82,7 @@ Instale as dependências:
 
 pip install -r requirements.txt
 
-Execução
+## Execução
 
 Inicie o servidor:
 
@@ -100,13 +100,13 @@ Por padrão, os vídeos são salvos em:
 
 O nome do arquivo segue o título original do vídeo.
 
-Observações Técnicas
+## Observações Técnicas
 
 Este projeto não utiliza interface gráfica nativa.
 A escolha por interface web visa simplicidade, portabilidade e compatibilidade futura.
 A arquitetura facilita a adição de novos recursos, como seleção de formato, download apenas de áudio, playlists, barra de progresso e empacotamento como AppImage ou PWA.
 
-Licença
+## Licença
 
 MIT, GPL-3.0
 
