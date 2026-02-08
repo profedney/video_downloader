@@ -1,46 +1,114 @@
 # 🎬 YouTube Video Downloader
 
 Um aplicativo simples e leve para baixar vídeos do YouTube diretamente no seu computador.  
-Desenvolvido em **Python + PyWebView**, com interface moderna e intuitiva.  
+Desenvolvido em **Python + Web UI**, com interface moderna e intuitiva.  
 
 ![Screenshot do YouTube Downloader](screenshot.png)
 
 
 ---
 
-## 💾 Como instalar e usar
+Video Downloader (Python + Web UI)
 
-1️⃣ **Baixe o arquivo ZIP:**  
-👉 https://github.com/user-attachments/files/22752416/video-downloader.zip
+Downloader de vídeos do YouTube (e de outros sites suportados pelo yt-dlp) desenvolvido em Python, utilizando uma interface web acessada diretamente pelo navegador. O projeto executa um servidor HTTP local que expõe uma API simples para download e uma interface HTML/JavaScript para interação com o usuário.
 
-2️⃣ **Descompacte** o arquivo ZIP em qualquer pasta do seu computador (por exemplo, na área de trabalho).
+A opção por interface web elimina dependências gráficas nativas (GTK/Qt), garantindo compatibilidade com Python 3.13 e funcionamento consistente em Linux, Windows e macOS.
 
-3️⃣ **Execute o programa:**  
-Clique duas vezes em  
-video_downloader.exe
+Características
 
+Python 3.13 ou superior
 
-4️⃣ **Cole o link do vídeo do YouTube** e clique em **Baixar**.
+Interface web (HTML, CSS e JavaScript)
 
-📁 O vídeo será salvo automaticamente na sua pasta **Downloads**.
+Execução multiplataforma (Linux, Windows e macOS)
 
----
+Sem uso de pywebview, GTK ou Qt
 
-## 🧩 Requisitos
+Backend simples baseado em biblioteca padrão + yt-dlp
 
-- Windows 10 ou 11  
-- Conexão com a internet  
+Download no melhor formato disponível (preferência MP4)
 
-*(não é necessário instalar nada adicional — o programa já vem pronto para uso)*
+Arquitetura clara e extensível
 
----
+Arquitetura
 
-## ⚠️ Aviso importante
+O sistema é dividido em duas camadas bem definidas:
 
-Este programa é destinado apenas para uso **educacional** ou para vídeos **de livre distribuição**.  
-Não utilize para baixar conteúdo protegido por direitos autorais sem permissão do autor.
+Backend Python
+Responsável por executar um servidor HTTP local, receber requisições de download, invocar o yt-dlp e salvar os arquivos no diretório do usuário.
 
----
+Frontend Web
+Responsável por coletar a URL do vídeo, enviar requisições HTTP para o backend e exibir mensagens de status ao usuário.
+
+Fluxo simplificado:
+
+Navegador → Interface Web → HTTP (localhost) → Python → yt-dlp → Downloads
+
+Requisitos
+
+Python 3.13 ou superior
+
+pip
+
+Navegador moderno (Firefox, Chromium, Chrome, etc.)
+
+Estrutura do Projeto
+
+video_downloader/
+main.py
+README.md
+requirements.txt
+web/
+index.html
+styles.css
+script.js
+.gitignore
+LICENSE
+
+Instalação
+
+Clone o repositório:
+
+git clone https://github.com/profedney/video_downloader.git
+
+cd video_downloader
+
+Crie e ative um ambiente virtual (recomendado):
+
+python3 -m venv venv
+source venv/bin/activate
+
+Instale as dependências:
+
+pip install -r requirements.txt
+
+Execução
+
+Inicie o servidor:
+
+python main.py
+
+O navegador padrão será aberto automaticamente apontando para a interface web local. Caso isso não ocorra, acesse manualmente:
+
+http://localhost:8765/web/index.html
+
+Diretório de Download
+
+Por padrão, os vídeos são salvos em:
+
+~/Downloads
+
+O nome do arquivo segue o título original do vídeo.
+
+Observações Técnicas
+
+Este projeto não utiliza interface gráfica nativa.
+A escolha por interface web visa simplicidade, portabilidade e compatibilidade futura.
+A arquitetura facilita a adição de novos recursos, como seleção de formato, download apenas de áudio, playlists, barra de progresso e empacotamento como AppImage ou PWA.
+
+Licença
+
+Defina aqui a licença do projeto (exemplo: MIT, GPL-3.0 ou Apache-2.0).
 
 ## 👨‍💻 Autor
 
