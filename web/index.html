@@ -5,16 +5,22 @@
     <title>Baixar Vídeo do YouTube</title>
     <link rel="stylesheet" href="styles.css">
     <script>
-        async function baixarVideo() {
+        async function baixar() {
             const url = document.getElementById("url").value;
-            const status = document.getElementById("status");
-            status.innerText = "Baixando...";
-            try {
-                const resultado = await pywebview.api.baixar_video(url);
-                status.innerText = resultado;
-            } catch (e) {
-                status.innerText = "Erro: " + e.message;
+
+            if (!url) {
+                alert("Cole uma URL primeiro.");
+                return;
             }
+
+            const resp = await fetch("/api/baixar", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ url })
+            });
+
+            const data = await resp.json();
+            document.getElementById("status").innerText = data.mensagem;
         }
     </script>
 </head>
@@ -22,7 +28,7 @@
     <div class="container">
         <h1>🎬 Downloader de Vídeos do YouTube</h1>
         <input id="url" type="text" placeholder="Cole o link do YouTube aqui">
-        <button onclick="baixarVideo()">Baixar</button>
+        <button onclick="baixar()">Baixar</button>
         <p id="status"></p>
     </div>
 </body>
